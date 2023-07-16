@@ -1,0 +1,548 @@
+HTML Learning Journal
+
+5 things without referring to journal:
+    Website consists of elements such as <body>, <head>, <main>, <nav>, and so on.
+    HTML is case insensitive, but it's better if elements are written in all lowercase (with couple exceptions, such as DOCTYPE).
+    There are different levels of headings, h1...h6. This builds a hierarchy and outline of a website. Something such as reference page in books.
+    Head includes metadata of a website, such as language, author, and such.
+    <p> element is a paragraph element (inline).
+
+5 things with referring to journal:
+    <title> tag is used to set the title of a website. This name is displayed in the tab.
+    <a href="link"> is used for links.
+    There can be multiple values for a target of a link:
+        _self - Default. Opens the document in the same window/tab as it was clicked
+        _blank - Opens the document in a new window or tab
+        _parent - Opens the document in the parent frame
+        _top - Opens the document in the full body of the window
+    It's a good standard to close all HTML elements (There's couple that doesn't need to)
+    <table> creates table with <tr> - table row, <td> - table data, and <th> - table header
+
+5 new things I'm aware I can learn:
+    Learn about professional comments. What is a good practice in writing comments?
+    Class naming. What are good standards for writing clean and readable classes?
+    Whether classes should be used for every element?
+    Work with different form inputs, such as password or file.
+    Learning more about metadata and how can the <head> be improved
+
+Professional vs. Beginner
+    Professionals perform well because of all the tools learned and learning what's important and what's not. There are also a lot of shortcuts available for writing the code faster. Professionals really understand the code and what each element does, while beginners might just copy and paste the part of the code that they need. Workflow is different between professional and beginner. While beginners might start writing code right away, for professionals, there might be couple major steps before even starting with the code. 
+
+1) Git and GitHub
+Before I start learning HTML, I wanted to learn a little bit about Git and GitHub. I used two youtube videos for this:
+
+Git, GitHub, & GitHub Desktop for beginners
+https://www.youtube.com/watch?v=8Dd7KRpKeaE
+
+Git is a version control system. It enables me to revert changes and that can be very useful in any type of coding, especially web programming. I also like learning about Git and GitHub, as it is a necessary tool in many jobs in this profession.
+
+Git - Version control system
+GitHub - Website for hosting Git repositories
+GitHub Desktop - GUI software tool with simplified Git commands
+Git Bash - Shell tool for Git command line
+
+This video explains the use of GitHub Desktop. I will be using Git Bash and command line for these homeworks.
+
+Git Tutorial For Dummies
+https://www.youtube.com/watch?v=mJ-qvsxPHpY
+I'll be using a lot of Git commands that are explained in this video:
+
+git init - initialize Git repository
+git add - save changes (git add index.html i.e or git add . (save everything))
+git reset - unstage changes
+git reset --hard [commit id] - revert back to that commit
+git commit -m 'message' - commit the changes
+git log - log of commits
+git checkout [commit id] - go back to that commit
+git remote add origin [github SSH/HTTPS] - connect local repository to the one on GitHub
+git push -u origin [branch] - push commits to the GitHub
+git checkout -b [name] - create name branch
+git checkout [name] - switch to a name branch
+git branch -d [name] - delete name branch
+git push origin --delete [name] - delete remote name branch 
+git branch - show branches
+git merge 'branch name to merge into the current one'
+pull request is request for changes on GitHub
+git pull origin [branch] - pull the changes from the GitHub
+git status - check the status of the repository
+all the others linux commands such as cd, ls, touch, rm, and such
+
+2) HTML
+I'll be using W3 Schools for learning HTML:
+https://www.w3schools.com/html/default.asp
+
+HTML stands for Hyper Text Markup Language
+There are a lot of HTML elements. HTML element is defined by a start tag, some content, and an end tag:
+<tagname>Content...</tagname>
+
+Here, I will put elements that I encounter in my learning:
+
+Elements:
+    <title>'name'</title> - HTML page title
+    <head/> - contains meta information
+    <html/> - root element of HTML page
+    <!DOCTYPE html> - declaration that the document is HTML5 document
+    <body/> - document's body content
+    <h1...6/> - heading
+    <p/> - paragraph
+    <br> - nothing (empty element)
+    <a href="link">link text</a>
+        target:
+            _self - Default. Opens the document in the same window/tab as it was clicked
+            _blank - Opens the document in a new window or tab
+            _parent - Opens the document in the parent frame
+            _top - Opens the document in the full body of the window
+        absolute & relative
+        image can be used as link
+        href="mailto:someone@example.com"
+        style:
+            a:link - unvisited link
+            a:visited - visited link
+            a:hover - hovered link
+            a:active - pressed link
+        link buttons style:
+            display: inline-block
+        bookmarks
+            Use the id attribute (id="value") to define bookmarks in a page
+            Use the href attribute (href="#value") to link to the bookmark
+    <img src="link" alt="text" width="10" height="10">
+        style:
+            float:
+                right
+                left
+                none
+                initial
+    background image:
+        <style>
+            body {
+                background-image: url('img_girl.jpg');
+            }
+        </style>
+        background-repeat:
+            repeat
+            repeat-x
+            repeat-y
+            no-repeat
+            space
+            round
+            initial
+            inherit
+        background-attachment: fixed - entire element is always covered
+        background-size: 
+            cover - cover the entire element
+            100% 100%
+    favicon:
+        <head>
+            <title>My Page Title</title>
+            <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+        </head>
+    <hr> - horizontal line
+    <pre> - preformatted text
+    <!-- "Comment" -->
+    <iframe src="url" title="description"></iframe>
+        style:
+            border: none
+        target="iframe name"
+
+Attributes:
+    href - URL
+    src - path
+        absolute
+        relative
+    width & height
+    alt - alternate text
+    style - element's style
+    lang - Language (<html lang="en">)
+    title - title
+
+Standards:
+    It's better to use relative path
+    In some situations, when the attribute value itself contains double quotes, it is necessary to use single quotes
+    Always Declare Document Type
+    Use Lowercase Element Names
+    Close All HTML Elements
+    Use Lowercase Attribute Names
+    Always Quote Attribute Values
+    Always Specify alt, width, and height for Images
+    Spaces and Equal Signs
+        <link rel="stylesheet" href="styles.css">
+    Avoid Long Code Lines
+    Blank Lines and Indentation
+        Do not add blank lines, spaces, or indentations without a reason.
+
+        For readability, add blank lines to separate large or logical code blocks.
+
+        For readability, add two spaces of indentation. Do not use the tab key.
+    Never Skip the <title> Element
+        The <title> element:
+            defines a title in the browser toolbar
+            provides a title for the page when it is added to favorites
+            displays a title for the page in search-engine results
+    Always add <html>, <body>, and <head> tags
+    Close Empty HTML Elements
+        If you expect XML/XHTML software to access your page, keep the closing slash (/), because it is required in XML and XHTML - <meta charset="utf-8" />
+    Add the lang Attribute
+    Add Meta data
+    Setting The Viewport
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    Add comments where needed
+    Using Style Sheets
+        <link rel="stylesheet" href="styles.css">
+    Long CSS rules should be written over multiple lines
+    Loading JavaScript in HTML
+        <script src="myscript.js">
+    Use Lower Case File Names
+    File Extensions
+        HTML files should have a .html extension (.htm is allowed).
+
+        CSS files should have a .css extension.
+
+        JavaScript files should have a .js extension.
+
+Style:
+    <tagname style="property:value;">
+
+    background-color
+    color - text color
+    font-size
+    font-family
+    text-alignment
+        center
+        left
+        right
+    border: 2px solid blue (different options)
+    padding - defines a padding between the text and the border
+    margin - space outside border
+
+Colors:
+    RGB (rgb(255, 99, 71))
+    HEX (#ff6347)
+    HSL (hsl(9, 100%, 64%))
+    rgbA & hslA - A - alpha channel/transparency
+
+CSS:
+    Inline - by using the style attribute inside HTML elements
+
+    Internal - by using a <style> element in the <head> section 
+        <head>
+            <style>
+                body {background-color: powderblue;}
+                h1   {color: blue;}
+                p    {color: red;}
+            </style>
+        </head>
+
+    External - by using a <link> element to link to an external CSS file
+        <head>
+            <link rel="stylesheet" href="styles.css">
+        </head>
+
+    I'll be using external CSS file because it's the most common and most practical way to do it.
+
+Formatting elements:
+    <b/> - Bold text
+    <strong/> - Important text
+    <i/> - Italic text
+    <em/> - Emphasized text
+    <mark/> - Marked text
+    <small/> - Smaller text
+    <del/> - Deleted text
+    <ins/> - Inserted text
+    <sub/ - Subscript text
+    <sup/> - Superscript text
+
+Quotation:
+    <blockquote cite="link"/> - element defines a section that is quoted from another source.
+    <q/> - short quotation
+    <abbr title="full name"/> - abbreviation
+    <address/> - contact information
+    <cite/> - title of a creative work
+    <bdo/> - Bi-Directional Override
+
+Tables:
+    <table>
+        <tr>
+            <th>header</th>
+        </tr>
+        <tr>
+            <td>data</td>
+        </tr>
+    </table>
+    <caption>table caption</caption>
+    <colgroup/> - specifies a group of one or more columns in a table for formatting.
+        width
+        visibility
+        background
+        border
+    <col/> - Specifies column properties for each column within a <colgroup> element
+    span - Specifies the number of columns a column group should span
+    <thead/>
+    <tbody/>
+    <tfoot/>
+    border-collapse: collapse
+    border-radius - rounded corner
+    border-style:
+        dotted     
+        dashed     
+        solid     
+        double     
+        groove     
+        ridge     
+        inset     
+        outset     
+        none     
+        hidden
+    width
+    height
+    vertical table headers:
+        <tr>
+        <th>Firstname</th>
+        <td>Jill</td>
+        <td>Eve</td>
+        </tr>...
+    colspan - column spans on 2 or more
+    rowspan - row spans on 2 or more
+    padding-:
+        top
+        bottom
+        left
+        right
+        top bottom left right
+    border-spacing - space between table cells
+
+Lists:
+    unordered:
+        <ul>
+            <li>item</li>
+        </ul>
+
+        list-style-type:
+            disc
+            circle
+            square
+            none
+
+    ordered:
+        <ol>
+            <li>item</li>
+        </ol>
+
+        type:
+            type="1"
+            type="A"
+            type="a"
+            type="I"
+            type="i"
+
+        start="starting number"
+
+    description:
+        <dl>
+            <dt>item</dt>
+            <dd>description</dd>
+        </dl>
+
+    horizontal:
+        <style>
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #333333;
+            }
+
+            li {
+                float: left;
+            }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 16px;
+                text-decoration: none;
+            }
+
+            li a:hover {
+                background-color: #111111;
+            }
+        </style>
+        <li><a href="#home">Home</a></li>...
+
+Containers:
+    <div/> - block container
+    <span/> - inline container
+
+Class & Id:
+    <div class = "name1 name2">...</div>
+    <style>
+        .name1{
+            ...
+        }
+    </style>
+
+    <h1 id="name">...</h1>
+    <style>
+        #name{
+            ...
+        }
+    </style>
+    The id name must contain at least one character, cannot start with a number, and must not contain whitespaces (spaces, tabs, etc.).
+
+    A class name can be used by multiple HTML elements, while an id name must only be used by one HTML element within the page
+
+Layout:
+    <header> - Defines a header for a document or a section
+        one or more heading elements (<h1> - <h6>)
+        logo or icon
+        authorship information
+    <nav> - Defines a set of navigation links
+    <section> - Defines a section in a document
+        Chapters
+        Introduction
+        News items
+        Contact information
+    <article> - Defines an independent, self-contained content
+        Forum posts
+        Blog posts
+        User comments
+        Product cards
+        Newspaper articles
+    <aside> - Defines content aside from the content (like a sidebar)
+    <footer> - Defines a footer for a document or a section
+        authorship information
+        copyright information
+        contact information
+        sitemap
+        back to top links
+        related documents
+    <details> - Defines additional details that the user can open and close on demand
+    <summary> - Defines a heading for the <details> element
+    <figure> - specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.
+    <figcaption> - defines a caption for a <figure> element. The <figcaption> element can be placed as the first or as the last child of a <figure> element.
+    <time> - defines date/time
+
+    Layout Techniques:
+        CSS framework
+        CSS float property
+        CSS flexbox
+        CSS grid
+
+Forms:
+    <form>
+        <label for="nameid">Label</label>
+        <input type="" id="nameid" name="name">
+            text
+            radio
+                value
+            checkbox
+                value
+            submit
+                value
+            button
+    </form>
+    action - Specifies where to send the form-data when a form is submitted
+    target - Specifies where to display the response that is received after submitting the form
+        _blank
+        _self
+        _parent
+        _top
+        framename
+    method - Specifies the HTTP method to use when sending form-data
+        get - URL variables
+        post - HTTP post transaction
+    autocomplete - Specifies whether a form should have autocomplete on or off
+        on&off
+    novalidate
+    accept-charset - Specifies the character encodings used for form submission
+    enctype - Specifies how the form-data should be encoded when submitting it to the server (only for method="post")
+    rel - Specifies the relationship between a linked resource and the current document
+
+    The HTML <form> element can contain one or more of the following form elements:
+    <input>
+    <label>
+    <select> - drop-down
+        <option></option>
+            selected
+        size
+        multiple
+    <textarea>
+        rows
+        cols
+    <button>
+        onclick
+            alert()
+    <fieldset> - used to group related data in a form
+    <legend> - defines a caption for the <fieldset> element
+    <datalist> - specifies a list of pre-defined options for an <input> element
+        <option>
+    <output> - represents the result of a calculation (like one performed by a script).
+    <option>
+    <optgroup> - Defines a group of related options in a drop-down list
+
+    Input types:
+        <input type="button">
+        <input type="checkbox">
+        <input type="color">
+        <input type="date">
+        <input type="datetime-local">
+        <input type="email">
+        <input type="file">
+        <input type="hidden">
+        <input type="image">
+        <input type="month">
+        <input type="number">
+        <input type="password">
+        <input type="radio">
+
+        <input type="range"> - defines a control for entering a number whose exact value is not important (like a slider control). Default range is 0 to 100. However, you can set restrictions on what numbers are accepted with the min, max, and step attributes
+
+        <input type="reset">
+
+        <input type="search"> - used for search fields (a search field behaves like a regular text field)
+
+        <input type="submit">
+
+        <input type="tel"> - used for input fields that should contain a telephone number
+
+        <input type="text">
+
+        <input type="time"> - allows the user to select a time (no time zone)
+
+        <input type="url"> - used for input fields that should contain a URL address
+
+        <input type="week"> - allows the user to select a week and year
+
+    Input restrictions:
+
+        checked	- Specifies that an input field should be pre-selected when the page loads (for type="checkbox" or type="radio")
+
+        disabled - Specifies that an input field should be disabled
+
+        max - Specifies the maximum value for an input field
+
+        maxlength - Specifies the maximum number of character for an input field
+
+        min	- Specifies the minimum value for an input field
+
+        pattern	- Specifies a regular expression to check the input value against
+
+        readonly - Specifies that an input field is read only (cannot be changed)
+
+        required - Specifies that an input field is required (must be filled out)
+
+        size - Specifies the width (in characters) of an input field
+
+        step - Specifies the legal number intervals for an input field
+
+        value - Specifies the default value for an input field
+
+        multiple - specifies that the user is allowed to enter more than one value in an input field
+
+        placeholder - specifies a short hint that describes the expected value of an input field (a sample value or a short description of the expected format)
+
+        autofocus - specifies that an input field should automatically get focus when the page loads
+
+
+

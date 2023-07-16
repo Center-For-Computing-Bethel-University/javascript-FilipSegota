@@ -1,0 +1,72 @@
+Learning Learning Journal
+
+There are couple different reasons why want to track our learning progress.
+    We can go back and revise learned things
+    See what type of learning works best for us
+    Develop growth mindset
+    Document the learning process for others
+    We don't waste time trying to learn something all over against
+
+The way I track my learning progress here is by keeping a earning journal. Besides that, there are also other methods of keeping track of learning:
+    verbal
+    hand-written
+    electronic diary
+        document
+        web sites
+
+Which one we decide to use will depend on couple of factors, one of which are our goals, our methods, the reason for learning, etc.
+
+For each learning journal assignment, I will write down 5 things without referring the journal, 5 things with a journal, and 5 new things that I'm aware of that I can learn. Also, I will write how the coding practice might differ between professionals and beginners.
+
+When we try to focus our learning, there are couple of things that can guide our focus during learning. Type of learning can depend on:
+    Whether we're trying to memorize the content
+    Learn a rule
+    Make a habit
+    etc.
+
+Another step is also learning about and how to use technology. We can either figure it out ourselves or we can rely on experts. Which one we choose will depend on difficulty, correctness, or durability. Sometimes, the importance of learning will require of us to find an expert. There are couple ways how to find an expert.
+
+Bloom's taxonomy - https://en.wikipedia.org/wiki/Bloom%27s_taxonomy
+Learning objectives can be classified in hierarchical model, called Bloom's taxonomy. It starts with the most basic and moves on to the more complicated. The levels are:
+    Knowledge - involves recognizing or remembering facts, terms, basic concepts, or answers without necessarily understanding what they mean.
+    Comprehension - involves demonstrating an understanding of facts and ideas by organizing, summarizing, translating, generalizing, giving descriptions, and stating the main ideas.
+    Application - Application involves using acquired knowledge to solve problems in new situations. This involves applying acquired knowledge, facts, techniques and rules.
+    Analysis - Analysis involves examining and breaking information into component parts, determining how the parts relate to one another, identifying motives or causes, making inferences, and finding evidence to support generalizations.
+    Synthesis - Synthesis involves building a structure or pattern from diverse elements; it also refers to the act of putting parts together to form a whole or bringing pieces of information together to form a new meaning.
+    Evaluation - Evaluation involves presenting and defending opinions by making judgments about information, the validity of ideas, or quality of work based on a set of criteria.
+
+    This can be put as: receiving, responding, valuing, organizing, and characterizing.
+
+There are different scenarios why we might be learning. Knowing why we are learning will help us decide whether we need an experts help or not. We can decide that based on how costly the mistake can be, how likely are we to make a mistake, or how easy it is to find an expert. Knowing scenarios for the lesson will help us decide what to learn.
+Some scenarios are (We can imply Bloom's taxonomy on these scenarios.):
+    solve a syntax level issue - knowledge
+    find a method to make me more productive about a specific thing - comprehension/application
+    find a specific question - knowledge/comprehension
+    develop a new skill - application
+    learn about a new technology if it's appropriate - comprehension/application/analysis
+    required to learn by your manager - depending on request
+    find a different job - depending on a job
+    pass certification exam - depending on the exam, but around application
+    learn because you want to know -  depending on us
+
+We can use what we learned in different ways, such as being able to accomplish task or decide what technology to use.
+    When deciding on what technology to use, there are steps:
+        learn just enough to understand the general concept
+        identify our needs
+        learn about each option in terms of our needs
+In order to accomplish a task, we need to do couple of steps:
+    test concept in a plain environment
+    integrate - both in code and in a journal
+    learn how to implement new knowledge with a demo project
+    come up with a simple project
+    determine the differences between two
+    get your project to work in a simple environment
+    get a simple project to work in a work environment
+    move your project
+    create another "project" to make sure it can be repeated
+
+There are couple ways how to make learning usable
+    don't want to learn when applying
+    differentiate between knowledge used every day and knowledge used only every so often
+    It's important to know if the environment can give me what I need
+    Be careful with complex answers

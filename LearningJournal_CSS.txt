@@ -1,0 +1,679 @@
+CSS Learning Journal
+
+5 things without referring to journal
+    There are multiple specifiers, such as .clasname, #idname, element, and so on
+    We can set background color with background-color:
+    font-family is used to setting font
+    font-size is used for setting size of letters
+    colors is used to set color of a text
+
+5 things with referring to journal
+    We can use css internal, inline, and external
+    Pseudo-classes - A pseudo-class allows you to select elements based on some special state of the element.
+    :hover - Matches an element that the mouse cursor is currently hovering over. This is typically used for buttons and links but can be applied to any type of element.
+    Border can have many different styles, such as dotted, dashed, solid, etc.
+    Some of the ways to define colors are rgb, hex, hsl
+
+5 things I'm aware I can use
+    Learning a thing such as bootstrap
+    Learning sass
+    Learning how to write better code and comments
+    Learning more about grid and flex layouts
+    Learning about more css frameworks
+
+Professional vs. beginner
+    Professional know how to write readable code. Also, knowing when to use classes and when not to. Sometimes, professionals create a style such as background color and then put elements they want with that background color in that class instead of other way around. That can make code even more readable. Professional also know exactly when to use the right things for right purposes. This comes with experience.
+
+
+"Modern CSS-Master the Key Concepts of CSS for Modern Web Development"
+
+1. Introduction to CSS
+
+CSS(Cascading Style Sheets) - It's a language for specifying how an HTML document is displayed
+Selector {property: value;} - .header {background-color: red;}
+
+Property conflict - If the same property is used more than once in a given rule, the last definition in the rule wins.
+
+Comments - /*comment*/
+
+At-rules - special CSS rule that acts as a directive controlling the behavior of CSS.
+    @charset: Defines the character encoding used in the CSS file.
+
+    @import: Imports, or includes, the contents of another style sheet.
+
+    @media: Defines a media query.
+
+    @keyframes: Defines a set of keyframes for a CSS animation.
+
+How to use:
+
+    Inline - by using the style attribute inside HTML elements
+
+    Internal - by using a <style> element in the <head> section 
+            <head>
+                <style>
+                    body {background-color: powderblue;}
+                    h1   {color: blue;}
+                    p    {color: red;}
+                </style>
+            </head>
+
+    External - by using a <link> element to link to an external CSS file
+            <head>
+                <link rel="stylesheet" href="styles.css">
+            </head>
+
+2.CSS Selectors
+
+A selector determines which element(s) a CSS rule applies to.
+CSS selectors can target multiple elements on the page and a single HTML element can be affected by multiple CSS rules.
+
+The basic types of selectors are:
+
+    Universal - matches all elements
+        * {
+            margin: 0;
+        }
+
+    Element - targets an HTML element by its tag name
+        p {
+            margin: 25px;
+        }
+
+    ID - An HTML element can have an id attribute. As a general rule, there should only be one element with a given id.
+        #header {
+            padding: 25px;
+        }
+
+    Class - An HTML element can also have a class attribute. A class can be used to mark all elements of a related type.
+        .nav-link {
+            color: darkcyan;
+        }
+    
+    Attribute - HTML elements can also be selected by their attribute values or by the presence of an attribute.
+
+        [name] - Selects all elements that have the given attribute, regardless of its value.
+
+        [name="value"] - Selects all elements that have the given attribute, whose value is the string value.
+
+        [name~="value"] - Selects all elements that have the given attribute, whose value contains the string value separated by whitespace.
+
+        [name*="value"] - Selects all elements that have the given attribute, whose value contains the substring value.
+
+        [name^="value"] - Selects all elements that have the given attribute, whose value begins with value.
+
+        [name$="value"] - Selects all elements that have the given attribute, whose value ends with value.
+
+
+    div.my-class - Matches all div elements with a class of my-class.
+
+    span.class-one.class-two - Matches all span elements with a class of both class-one and class-two.
+
+    a.nav-link[href*="example.com"] - Matches all a elements with a class of nav-link that have an href attribute that contains the string example.com.
+
+    A CSS rule can have multiple selectors separated by a comma. The rule will be applied to any element that is matched by any one of the given selectors.
+        .class-one, .class-two
+    
+    Selector combinators - Combinators are used to select more specific elements.
+
+        Descendant combinator - The descendant combinator matches an element that is a descendant of the element on the left-hand side.
+            .header div
+
+        Child combinator - The child combinator matches an element that is a direct child of the element on the left-hand side.
+            .header > div
+
+        General sibling combinator - The general sibling combinator matches an element that is a sibling, but not necessarily an immediate sibling, of the element on the left-hand side.
+            .header ~ div
+
+        Adjacent sibling combinator - The adjacent sibling combinator is similar to the general sibling combinator, except it only matches elements that are an immediate sibling.
+            .header + div
+
+        Using multiple combinators - Just like basic selectors, combinators can be combined to form even more specific selectors.
+            div.header > div + button
+
+    Pseudo-classes - A pseudo-class allows you to select elements based on some special state of the element.
+
+        :active - Matches an element that is currently being activated. For buttons and links, this usually means the mouse button has been pressed but not yet released.
+
+        :checked - Matches a radio button, checkbox, or option inside a select element that is checked or selected.
+
+        :focus - Matches an element that currently has the focus. This is typically used for buttons, links, and text fields.
+
+        :hover - Matches an element that the mouse cursor is currently hovering over. This is typically used for buttons and links but can be applied to any type of element.
+
+        :valid, :invalid - Used with form elements using HTML5 validation. The :valid pseudo-class matches an element which is currently valid according to the validation rules, and :invalid matches an element which is not currently valid.
+
+        :visited - Matches a link whose URL has already been visited by the user. To protect a user's privacy, the browser limits what styling can be done on an element matched by this pseudo-class.
+
+        :first-child, :last-child - Matches an element that is the first or last child of its parent.
+
+        :nth-child(n) - his pseudo-class takes an argument. It matches an element that is the nth child of its parent. The index of the first child is 1.
+
+        :nth-of-type(n) - Similar to :nth-child, except that it only considers children of the same type.
+
+        :root - Matches the root element of the document. This is usually the html element.
+
+        :not() - :not accepts a selector as its argument and will match any element for which the selector does not match.
+
+    Pseudo-elements - A pseudo-element lets you select only part of a matched element. Pseudo-elements are specified with a double colon (::) followed by the pseudo-element name.
+
+        ::first-line - Matches the first line of a block element.
+
+        ::first-letter - Applies the styles only to the first letter of the first line of an element.
+
+        ::before, ::after - Two special pseudo-elements are ::before and ::after. These pseudo-elements don't select part of the element; rather, they actually create a new element as either the first child or the last child of the matched element, respectively. These pseudo-elements are typically used to decorate or add effects to an element.
+
+    Specificity rankings:
+        Inline styles in an element's style attribute
+
+        ID selectors
+
+        Class selectors, attribute selectors, and pseudo-classes
+
+        Element selectors and pseudo-elements
+
+
+        The escape hatch: !important - Any CSS property can have the keyword !important after it inside of a rule. This keyword will cause that property to always win in a conflict, even if the rule that contains it has lower specificity than another conflicting rule.
+
+3. Basic CSS Concepts
+
+    Every element in CSS is treated like a rectangular box. This is sometimes referred to as the box model. The box is made up of four parts. Starting from the outside and moving toward the center, these are the margin, border, padding, and content.
+
+        margin - the space between an element's border and its surrounding elements.
+
+        border - The border is an outline around the box. Borders can be styled with a thickness, style, and color.
+
+        padding - The padding is the space between the element's border and the content itself.
+
+        width, height - size of an element
+
+        box-sizing:
+            content-box - This is the default. With content-box, the width and height properties are treated as the width and height of the content area of the box only. The actual width and height taken up by the element's box is the sum of the specified width and height (the content box), the padding on each side, and the border width on each side.
+
+            border-box - With border-box, the values of the width and height properties are treated as the size of the content box plus the padding and border width.
+
+    Block (e.g., div) and inline elements (e.g., span) - two types of HTML elements. n element's type can be changed by setting the display property to block, inline, or inline-block.
+
+    Block element - A block element always appears on its own line and takes up the full width of its containing element, unless an explicit width is set with the width property. The height of a block element, by default, is just enough to fit the height of its content, but this height can also explicitly be set with the height property.
+
+    Inline element - Unlike block elements, an inline element is rendered inside the normal flow of text. They only take up enough width and height as necessary to contain their content. Setting the width or height properties of an inline element will have no effect. Padding and margins on inline elements give extra room horizontally, but not vertically.
+
+    Inline-block element - An inline-block element flows with the text like an inline element, but the width and height properties are respected, as are the vertical padding and margin.
+
+    Units:
+
+        px - It is generally not recommended to use px units in CSS. The main reason is that these pixel-based dimensions don't always scale well when a user adjusts the browser zoom level. This can be an accessibility issue. There is one property that is appropriate to use pixels for – the page's base font size. In most browsers, this defaults to 16px. The base font size is set by applying the font-size property to the root html element. It's also appropriate to use pixels in media queries
+
+        em - The em unit is a relative unit. It is relative to the font size of the element. The header element has a font size of 24px. The padding is specified as 0.5em, or half of the element's font size. Therefore, the padding applied to this element will be 12px.
+
+        rem - The rem unit is also a relative unit. It stands for "root em" and is relative to the page's base font size. For example, if the base font size is 16px (remember that this usually doesn't correspond to physical pixels), a size of 1rem is equal to 16px. 1.5rem would be 16px * 1.5 = 24px. rem units are a good choice, especially for layout properties, since the size of 1rem remains constant throughout the document (unlike the em unit). If the browser is zoomed, everything resizes nicely because it's all proportional to the base font size.
+
+        Viewport units: vw and vh - The viewport is the area of the page that is currently visible in your web browser. CSS also has units that are relative to the viewport size: vw (viewport width) and vh (viewport height). Each of these units are 1% of the viewport size in that direction, that is, 1vw is 1% of the viewport width and 1vh is 1% of the viewport height. If the viewport is resized, then any elements using vw units will have their sizes adjusted accordingly. Because vw and vh are relative to the viewport size, they are a good choice when using responsive design techniques. There are also two related units, vmin and vmax. vmin is defined as whichever is smaller – the viewport width or the viewport height – and vmax is the larger of the two.
+
+        % - The % unit is relative to the size of another value. What exactly this is relative to depends on the CSS property. For example, for the font-size property, the % unit is defined as a percentage of the parent element's font size. However, for the padding property, % is defined as a percentage of the element's width.
+
+        Some property values take no units at all but rather just a number. For example, the opacity property expects a number between 0 and 1. Another example of this is some flexbox properties such as flex-grow and flex-shrink, which expect integer numbers without units.
+
+    Functions:
+
+        calc - The calc function lets you combine the different units we saw earlier to calculate an exact amount. It can be used anywhere a value is expected. The real power of the calc function is that you can have mixed units in the calculation. For example, suppose you want the height of an element to be 10 pixels short of 1.5rem. This can easily be accomplished with the calc function: calc(1.5rem - 10px). This is likely easier than doing the size calculations yourself to specify an exact pixel value.
+
+    Color:
+        RGB (rgb(255, 99, 71))
+        HEX (#ff6347)
+        HSL (hsl(9, 100%, 64%))
+        rgbA & hslA - A - alpha channel/transparency
+
+    Overflow (also overflow-x and overflow-y) - behavior when the content is too big for the container.
+
+        hidden - the overflowing content is simply not displayed. It is clipped by the bounds of the containing element.
+
+        scroll - When the overflow property is set to scroll, the overflowing content is initially not visible. However, there are scrollbars provided so that the user can scroll and view the overflowing content. The scrollbars are always provided, even if the content does not overflow.
+
+        auto - This behaves similarly to scroll. The difference is that when overflow is set to auto, the scrollbars are only provided if the content actually overflows.
+
+    CSS variables - Why would we want to use variables in CSS? Suppose you're designing a website for a company. You use their brand color, #3FA2D9, in many places throughout your CSS. Later, the site is going through a rebranding, and the brand color is changing. You now have to change the brand color in every place you used #3FA2D9. Instead, you can define a brand-color variable and reference that variable everywhere you need to use the brand color. Later, when that color changes, you simply need to change the color value once – in the variable declaration.
+
+        --brand-color: #3FA2D9
+        background-color: var(--brand-color);
+        background-color: var(--brand-color, #3FA2D9); - backup option
+
+    A variable can be declared on any element or pseudo-element. Variables then cascade down to descendant elements. To make a variable apply to the entire document (a so-called global variable), you can set it using the special :root selector
+
+        --primary-border-color: red;
+        --primary-border-style: solid;
+        --primary-border-width: 3px;
+        --primary-border:
+            var(--primary-border-width)
+            var(--primary-border-style)
+            var(--primary-border-color);
+
+        height: calc(var(--row-height) * var(--visible-rows));
+
+4. Basic Styling
+
+    Global keywords:
+
+        initial - Uses the initial value set by the browser's built-in style sheet.
+
+        inherit - Takes the value used by the element's parent.
+
+        unset - If the property naturally inherits from its parent, such as font-size, it is set to the inherited value. Otherwise, it is set to the initial value from the browser's style sheet.
+
+    Shorthand and multiple values:
+
+        padding (padding-top, padding-bottom, padding-left, and padding-right properties)
+
+
+        border-width: 1px; - all four borders have the same width.
+
+        border-width: 1px 5px; - If two values are specified, the first applies to the top and bottom, and the second applies to the left and right.
+
+        border-width: 1px 5px 10px; - If three values are specified, the first applies to the top, the second applies to the left and right, and the third applies to the bottom.
+
+        border-width: 1px 5px 10px 20px; - if four values are specified, they are applied in clockwise order, starting at the top.
+
+    Borders:
+
+        border-color - The border-color property, as its name implies, sets the color of the border.
+
+        border-width - The border-width property determines how thick the border is. The value of border-width can be a value like 3px. There are also some predefined values: thin, medium, and thick.
+
+        border-style - The border-style property determines the visual appearance of the border.
+            solid
+            dotted
+            dashed
+            double
+            groove
+            ridge
+            inset
+            outset
+
+        border: 5px solid red;
+
+        border-collapse - Only applies to table elements. It controls how borders are preserved or collapsed between adjoining table cells. The default value is separate. With this default behavior, a table's borders are not combined. border-collapse: collapse;
+
+        border-radius - By default, blocks have 90-degree rectangular corners. That isn't always the most aesthetically pleasing design, though. To address this, CSS gives us the border-radius property. This property gives us rounded corners. The corners can be circular or elliptical.
+
+        border-radius: 10px;
+
+        border-radius: 20px / 10px; - ellipse
+
+        border-bottom-right-radius: 10px 20px;
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 20px 10px;
+        border-top-right-radius: 50%;
+
+    Box shadows:
+        A box shadow has a color, and its dimensions can be specified with up to four values, which are:
+            X offset
+            Y offset
+            Blur radius: How far out the shadow is blurred
+            Spread radius: How far the shadow extends beyond the element's dimensions
+        At a minimum, the X and Y offsets must be given. By default, the blur and spread radius are zero.
+
+        box-shadow: 5px 5px black; - no blur nor spread
+        box-shadow: 5px 5px 10px black; - added blur radius
+        box-shadow: 5px 5px 0 5px black; - all with 0 blur radius
+        box-shadow: 5px 5px 10px 5px black;
+        box-shadow: 0 0 5px 5px black; - all directions
+        box-shadow: 0 0 25px black inset; - inward shadow
+        box-shadow: 0 0 10px 0 black, 0 0 25px red inset; - multiple shadows
+
+    Opacity:
+        By default, most elements start out with a transparent background. When a background color or image is assigned, that element becomes opaque. You cannot see through the element to what's behind it. Borders and text are also opaque. You can change this behavior with the opacity property. opacity applies to the entire element – background, border, text, images, and any other content within that element or its children. The opacity property takes a number between 0 and 1 or a percentage from 0% to 100%. This sets the level of transparency of the element. An opacity of 0.5, or 50%, is half transparent.
+
+    Hiding elements:
+        display: none - When the display property is set to none, the element is removed from the flow of the document as if it was never there. Other elements will move to fill in the space.
+
+        visibility: hidden - This behaves a little differently than display: none – the flow of the document is not affected. This means that no elements will move to fill the empty space left by the hidden element.
+
+        opacity: 0 - This has the same net effect as visibility: hidden – the element is effectively hidden, but the layout is unchanged.
+
+5. Backgrounds and Gradients
+
+    Solid background color:
+        background-color: #FF0000;
+
+    Background Images:
+        Absolute URL - url('https://imgur.com/my-image.png');
+
+        Relative URL - url('/header.png');'
+
+        If an element is larger than its background image, by default the image will be repeated to fill the element.
+
+        background-repeat:
+            no-repeat - doesn't repeat
+            repeat-x or repeat-y - repeated just horizontally or just vertically
+
+        background-position:
+            center
+            top
+            bottom
+            left
+            right
+            px
+            %
+            x y
+
+        background-size:
+            cover - resize the background image to make sure that the element is fully covered. If the aspect ratio of the image doesn't match that of the element, the image will be cropped.
+            
+            contain - resize the background image so that the entire image fits within the element.
+
+            x y
+
+        background-clip:
+            border-box - The background will extend all the way to the border.
+
+            padding-box - The background will extend to the padding area, but will not appear behind the border.
+
+            content-box - The background will only be shown behind the content area. It will not extend into the padding area or the border.
+
+        background:
+            he background-size must come directly after background-position, separated by a slash.
+
+            The background-color must come last.
+
+            background: url('mountains.jpg') center / cover;
+
+    Gradients:
+        Linear gradients go along a straight line. They can go left to right, top to bottom, or at an arbitrary angle.
+
+            background-image: linear-gradient(red, blue);
+
+            You can easily add more stops to a linear gradient:
+                background-image: linear-gradient(
+                    red,
+                    blue,
+                    green
+                );
+
+            Using transparency:
+                background-image: linear-gradient(
+                    transparent,
+                    blue,
+                    transparent
+                );
+
+            Change the direction:
+                background-image: linear-gradient(
+                    to right,
+                    red,
+                    blue
+                );
+
+                45deg
+
+            Customizing stops:
+                background-image: linear-gradient(
+                    to right,
+                    red 0%,
+                    blue 25%
+                );
+
+                px, em, rem
+
+        Radial gradients start at a central point and radiate outward.
+            The shape of a radial gradient can be defined as an ellipse (the default), or a circle. The shape is defined as the name of the shape and a position such as top, right, left, center, or specific percentages or values. The shape is defined as <shape> at <position>. The position can be omitted, in which case it defaults to center.
+
+            background-image: radial-gradient(
+                circle,
+                red,
+                blue
+            );
+
+            background-image: radial-gradient(
+                circle at 25%,
+                red,
+                blue
+            );
+
+            background-image: radial-gradient(
+                circle at top left,
+                red,
+                blue
+            );
+
+            The size of the gradient can be further influenced by providing modifiers to the shape that define where the gradient should end. The options that can be set are
+
+                closest-side: The gradient ends at the side closest to the center of the gradient. For a wide rectangle, this would be the top or bottom.
+
+                farthest-side: The gradient ends at the side farthest from the center of the gradient. For a wide rectangle, this would be the left or right.
+
+                closest-corner: The gradient ends at the closest corner to its center.
+
+                farthest-corner: The gradient ends at the farthest corner from its center. This is the default.
+
+            A radial gradient can also have multiple color stops.
+                background-image: radial-gradient(
+                    red,
+                    blue,
+                    green 75%
+                );
+
+        Multiple gradients:
+            background-image: radial-gradient(
+                ellipse at 25%,
+                red,transparent
+            ), radial-gradient(
+                ellipse at 75%,
+                blue,
+                transparent
+                );
+
+    Combining backgrounds:
+        background-image:
+            radial-gradient(
+                ellipse at top left,
+                white 25%,
+                transparent
+            ),
+            url('mountains.jpg');
+
+6. Text Styling
+
+    Fonts:
+        Web-safe fonts:
+            Sans-serif:
+                Arial
+                Trebuchet MS
+                Verdana
+            Monospace:
+                Courier New
+            Serif:
+                Georgia
+                Times New Roman
+
+    Basic Text Styling:
+        Font-family:
+            The font-family property sets the font to use for the element's text. This font is inherited by descendant elements. font-family can be specified as a single value, the name of the font to use. More commonly, a comma-separated list of fonts is given. The browser will try each font, starting with the first, until a match is found. Generally, the list starts specific and gets more general. The last font family in the list is typically a generic one like monospace or sans-serif, where the browser will use a fallback font that approximates the desired appearance. Font names containing spaces should be enclosed in quotes.
+
+        font-family:
+            Georgia,
+            'Times New Roman',
+            serif;
+
+        font-size:
+            An element inherits its parent's font size by default. This behavior can be overridden by using the font-size property, which sets the font size for the element. In addition, there are several predefined font-size values, ranging from xx-small to xxx-large. A relative font size can also be specified, with a value of smaller or larger. A font-size can also be specified as a percentage of its parent's size.
+
+        color:
+            The color property controls the element's text color (and text decorations such as underlines). It also sets the current color. This is a special value called currentColor that resolves to the text color, which can be referenced from other properties. currentColor is also the default border color, if one is not specified.
+        
+        font-weight:
+            The font-weight property defines how bold the text appears. This can be a simple value like normal or bold. It can also take numeric values: 100, 200, 300, 400, 500, 600, 700, 800, and 900. The higher the number, the bolder the font is. The normal value is equivalent to a weight of 400, and the bold value is equivalent to a weight of 700. font-weight can also be specified as the values lighter or bolder. These values are relative to the weight of the element's parent.
+
+        font-style:
+            The font-style property can be used to make text italic. It has three supported values: normal, italic, and oblique. Not all fonts include both an italic and oblique version. In this case, the italic and oblique styles look the same.
+
+        text-decoration:
+            The text-decoration property can be used to add decorative lines to text. These can be underlines, strikethrough lines, and even wavy lines (on most browsers). The basic usage of text-decoration takes a simple value: none, underline, or line-through. The text-decoration property can also take a color and a style. The available styles are solid, double, dotted, dashed, and wavy, none.
+
+        text-transform:
+            The text-transform property can be used to transform the text to all uppercase.
+                text-transform:
+                    uppercase
+                    none
+                    capitalize
+                    lowercase
+
+        letter-spacing:
+            The letter-spacing property can be used to adjust the space between each letter. The specified value is added to the normal spacing between letters.
+
+        font-variant:
+            The font-variant property can be set to small-caps for an interesting effect. All lowercase letters are transformed into smaller-sized capital letters.
+                font-variant: small-caps;
+
+    Text Layout:
+        text-indent:
+            The text-indent property is used to specify an indent on the first line of text in a block element.
+                text-indent: 50px;
+        
+        white-space:
+            The white-space property is used to specify how whitespace is handled inside an element that contains text. The default value is normal. With this value, sequential whitespace characters are collapsed. If the text content exceeds the width of its container, it will be wrapped to the next line.
+                normal
+                pre - whitespace is preserved in the rendered output
+                normal: The default behavior. Whitespace is collapsed, and text is automatically wrapped as needed.
+
+                nowrap - Same as normal, except that lines of text do not wrap.
+
+                pre-wrap - Same as pre, except that lines of text are also wrapped.
+
+                pre-line - Same as pre-wrap, except that consecutive whitespace characters are collapsed. Line breaks are still preserved.
+
+                break-spaces -  Same as pre-wrap, except that line wrapping behavior is slightly different. Not supported in Internet Explorer.
+
+        Truncating text:
+            Your design may require that text must fit within its container without overflowing or wrapping. This can easily be accomplished by using the white-space, overflow, and text-overflow properties together.
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+
+        line-height:
+            The line-height property controls the height of each line of text. It can be used to add spacing between lines of text.
+
+        Horizontal alignment:
+            Horizontal alignment is controlled by the text-align property. This only has an effect on block elements with a width greater than that of their content.
+                left
+                right
+                center
+                justify
+            text-align doesn't just affect text. It sets the horizontal alignment of any inline element inside the containing element on which text-align is set.
+        
+        Vertical alignment:
+            If a block element's height is taller than its content, by default the text will be aligned to the top of the container. You might think the vertical-align property would help here but setting vertical-align: center would have no effect. One way to solve this problem is to set the line-height to the same as the container height.
+                height: 5rem;
+                line-height: 5rem;
+            A baseline is an invisible line along which most letters sit. If we set vertical-align to middle on both elements, they become vertically aligned with each other.
+                vertical-align: middle;
+    
+    Using Web Fonts:
+
+        Web fonts allow the CSS to link to a font file that the browser can download. By using a web font, you can have a much more consistent look – plus, there are many beautiful web fonts out there that will enhance the look of your site or app. There are several different supported web font formats:
+            Web Open Font Format version 1 or 2 (WOFF/WOFF2)
+            Embedded Open Type (EOT)
+            TrueType Font (TTF)
+            Scalable Vector Graphics (SVG)
+        Modern browsers support WOFF and WOFF2. The other font formats are for support with older browsers. A web font is typically packaged in several different formats, all of which can be referenced in the CSS.
+
+        @font-face:
+            @font-face {
+                font-family: 'SomeWebFont';
+                src:
+                    url('/some-font.woff2') format('woff2'),
+                    url('/some-font.woff') format('woff');
+            }
+            body {
+                font-family: SomeWebFont, Arial, sans-serif;
+            }
+
+        Usually, a given web font file is only a single weight or style version of the font. This means there is one font file for the normal version and another for the bold version. They both must be registered in a separate @font-face rule under the same font-family. The font weight and style are specified via the font-weight and font-style properties.
+            @font-face {
+                font-family: 'SomeWebFont';
+                src: url('/some-font.woff2') format('woff2');
+                font-weight: 400;
+            }
+            @font-face {
+                font-family: 'SomeWebFont';
+                src: url('/some-font-bold.woff2') format('woff2');
+                font-weight: 700;
+            }
+        
+        Like any other resource, the browser must download the web font files before they can be used. If this is not done quickly, the browser may render the site in a fallback font while the web font is still loading. Once the font is loaded, the text is re-rendered in the new font. This results in unstyled text briefly appearing before being replaced by the correctly styled text – the so-called flash of unstyled text. Some browsers will also hide the text (up to several seconds) until the font is loaded. This results in a different, but even more annoying, phenomenon – the "flash of invisible text." Web fonts are great, but don't go overboard. The more fonts that are loaded, the longer the page takes to load, and the worse the flash of unstyled text can be. You should make sure to use only the web fonts that you absolutely need.
+
+    Text Shadow:
+         A text shadow has X and Y offsets, an optional blur radius, and a color.
+            text-shadow: 2px 2px 0px red;
+            text-shadow: 0px 0px 5px red;
+
+7. Layout and Positioning
+
+    Padding:
+        he padding is the spacing between an element's content and its border. By default, most elements have zero padding. An element's padding is not inherited by its children. Padding can be specified with any size unit or with a percentage.
+
+    Margin:
+        The margin is the space between an element's border and other elements. The value of the margin property can be a size value, a percentage, or the keyword auto. By default, most elements have no margin.
+
+        Centering with margin: auto
+            The margin property also accepts the auto value. When the horizontal (left and right) margin is set to auto in a block or inline-block element, the element is centered horizontally within its containing element. The element takes up the specified width, and the margin is automatically distributed evenly between the left and right margins.
+        
+        margin-collapse:
+            When two elements with a vertical margin meet vertically, the two margins are collapsed into a single margin. The size of the collapsed margin depends on the size of the two margins being collapsed. If they are the same size, then the collapsed margin will be the same size as the common margin. If they are different sizes, the collapsed margin will take the size of the larger margin. Margin collapse applies to vertical margins only. Another situation where the vertical margins collapse is when there is no border, padding, or other content between a parent and its child.
+    
+    Positioning elements:
+            The CSS position property determines how an element is positioned. The top, right, bottom, and left properties are used in conjunction with position to determine an element's final position. The default position is static. If an element's position property is set to any value other than static, it is considered a positioned element. This has important implications about the positioning of descendant elements.
+
+            position: static
+                static is the default value of the position property. A statically positioned element is positioned in the normal flow of the document. When position is set to static, the top, right, bottom, and left properties have no effect.
+
+            position: relative
+                A relatively positioned element is positioned relative to where it would normally appear in the flow of the document. If position is set to relative, but top, right, bottom, or left are not specified, it essentially has the same effect as if position were set to static. The one difference would be that the element would now be considered a positioned element, which can affect child elements with other position values. When an element has a position of relative, the other elements in the document flow are not affected, even if the element has an offset. The element's original position remains in the document flow.
+
+            position: absolute
+                An absolutely positioned element can also have top, right, bottom, and left offsets that affect its position. There are two main differences, though. First, an absolutely positioned element is removed from the document flow and "floats" above it. The layout of other elements will be adjusted as if the absolutely positioned element is not there. The other difference is the interpretation of the offsets. While a relatively positioned element's offsets are relative to the element's original position in the document, an absolute positioned element's offsets are relative to the closest ancestor positioned element. This is not necessarily the element's direct parent.
+
+            position: fixed
+                Like absolute, a position of fixed removes the element from the document's flow. Its position is determined by setting top, right, bottom, and left properties. The difference is that for a fixed element, these offsets are always relative to the viewport. This means that even if the page is scrolled, a fixed element will remain in the same position. This is useful, for example, for a fixed header or navigation bar. A block element with a position of static or relative will, by default, take up the full width of its container. However, if an element is given a position of absolute or fixed, this will no longer be the case. It will only be as wide as it needs to be to fit its content. This can usually be solved by adding a width: 100% to the element if the full width behavior is still desired.
+
+            position: sticky
+                A sticky element is a combination of relative and fixed. The element acts as a relatively positioned element, scrolling with the document. When the element reaches a specified point, it turns into a fixed element. This point is specified via a top, right, bottom, or left value.
+    
+    Z-index and Stacking Contexts:
+        
+        z-index - determines the stacking order of elements along the z-axis – which element is on top of which. z-index is a relative measure that can take any numeric value. Items with a higher z-index will appear on top of those with a lower one.
+
+        As it turns out, z-index doesn't control an element's z-axis ordering globally within the entire document. It only controls the z-index relative to other elements within a given stacking context. Initially, there is one stacking context, formed by the root of the document (the html element). Within the document, there are certain other elements that will create a new stacking context:
+
+            Any element that has a position other than static and a z-index other than auto
+
+            Any element with an opacity less than 1
+
+            Any element that is a child of a flex or grid container and a z-index other than auto
+
+        There are others, but these are the most common. If no z-index is given, there are certain stacking rules that are applied inside a stacking context. These are, from bottom to top:
+
+            The background and borders of the element that creates the stacking context
+
+            Descendant elements of the element that creates the stacking context that are not positioned
+
+            Descendant elements of the element that creates the stacking context that are positioned
+
+        These rules, in conjunction with explicitly set z-index properties, determine the final stacking order of elements.
+
+    Floats:
+        You can use the float property to make an element "float" to the left or the right and text and other inline elements will flow around it.
+        
+        float:
+            left;
+            right;
+            inline-start;
+            inline-end;
+
+        When the float property is applied to an element, it is removed from the flow of the document. It then "floats" to the left or right, stopping when it reaches the edge of the containing element, or another floated element.
+
+        Clearing floats:
+            The clear property can be used on an element to indicate that it can't be alongside a floated element in a given direction. The clear property can be none (the default), left, right, both, inline-start, or inline-end. If an element is cleared in a given direction, and there is a floated element there, the element will be moved so that it is below the floated element.
+
+
+
+Webkit - Webkit is a web browser rendering engine used by Safari and Chrome (among others, but these are the popular ones).

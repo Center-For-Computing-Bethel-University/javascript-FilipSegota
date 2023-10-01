@@ -16,6 +16,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Me</title>
     <link rel="stylesheet" href="style.css">
+    <!--Adding JavaScript file-->
+    <script src="myScript.js"></script>
 </head>
 
 <!--Body of a page-->
@@ -87,12 +89,15 @@
                 <fieldset class="main-fieldset">
                     <legend>Contact Me:</legend>
                     <!--Form sends information to feedback.php-->
-                    <form action="feedback.php" method="post" class="main-contact-form">
+                    <!--Call JS function for submit-->
+                    <form name="contactForm" action="feedback.php" onsubmit="return validateForm()" method="get"
+                        class="main-contact-form">
                         <fieldset class="form-fieldset">
                             <legend>Info:</legend>
 
                             <label for="name">Name:</label>
-                            <input type="text" id="name" name="name" required>
+                            <!--Add required. Deleted it to test JS-->
+                            <input type="text" id="name" name="name">
 
                             <!--Delete later-->
                             <fieldset>
@@ -106,7 +111,8 @@
                             </fieldset>
 
                             <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" required>
+                            <!--Add required. Deleted it to test JS-->
+                            <input type="email" id="email" name="email">
                         </fieldset>
 
                         <fieldset class="form-fieldset">
@@ -133,16 +139,17 @@
                             <legend>Inquiry:</legend>
 
                             <label for="">Type of inquiry:</label>
-                            <select id="inquiry" name="inquiry">
-                                <option value="feedback">Feedback</option>
-                                <option value="question">Question</option>
-                                <option value="comment">Comment</option>
-                                <option value="complaint">Concern</option>
+                            <select id="inquiry" name="inquiry" onchange="changeFunction()">
+                                <option value="Feedback">Feedback</option>
+                                <option value="Question">Question</option>
+                                <option value="Comment">Comment</option>
+                                <option value="Concern">Concern</option>
                             </select>
 
                             <div class="form-fieldset-label">
-                                <label for="feedback">Feedback:</label>
-                                <textarea name="feedback" id="feedback" cols="30" rows="10" required></textarea>
+                                <label for="feedback" id="inquiryTitle">Feedback:</label>
+                                <!--Add required. Deleted it to test JS-->
+                                <textarea name="feedback" id="feedback" cols="30" rows="10"></textarea>
                             </div>
                         </fieldset>
 
@@ -157,7 +164,9 @@
 
         <!--Footer section-->
         <footer>
-            Filip Segota 2023
+            <!--Call JS function to show time-->
+            <div class="footer-time"></div>
+            <div class="footer-name">Filip Segota 2023</div>
         </footer>
     </div>
 </body>

@@ -1,0 +1,153 @@
+JavaScript Learning Journal
+
+100+ JavaScript Concepts you Need to Know
+https://www.youtube.com/watch?v=lkIFF4maKMU
+
+JavaScript was designed as an easy to use high level language to help developers make websites interactive.
+Standard implementation is called EcmaScript. It's default language in all web browsers.
+It can be also run on servers using node.js and similar.
+It's Scripting language - execute code on a fly by opening console in browser dew tools.
+It's interpreted line by line (v8 jit - just-in-time compilation)
+
+<script></script> - place for JS code.
+Code can be inside tag or reference external file using src="".
+console.log(''); - printing to the standard output
+
+Variables:
+    let name (camelCase) = value; - dynamically typed language - no data type annotations are necessary.
+    Primitive data types:
+        string
+        number
+        bigint
+        boolean
+        undefined - default value without assigned value
+        symbol
+        null - empty value
+
+    We can reassign different types to a variable.
+    
+    Any value that is not primitive will inherit from the object class.
+
+    ; - if left out, JS parser will add them automatically.
+
+    const name = value; - used for variables that can't be reassigned later
+
+    var name = value - AVOID IT!
+
+Lexical environment - determines where the variables work and where they don't.
+    Global scope - available everywhere.
+    Local scope - local to the function or part of the code.
+    Block scope - if and similar blocks.
+
+function name(value, value) { - function definition
+    return something;
+}
+Functions are objects, which means they can be used as expressions - const name = function(value, value) {...}
+Higher order function - function name(function2){
+    function2();
+    or
+    return function() {
+
+    }
+}
+
+this - if called from global scope, it references window object in the browser; if called from the object, it references tat object
+
+Bind - bind function to the object:
+function function1() {...}
+const person = {}
+function1.bind(person);
+
+Arrow function - way to define function; arrow functions don't have their own this value and they are always anonymous - ideal for function expressions:
+const person = {
+    function1: () => {...}
+}
+
+Passing an argument to the function - function (arg1, arg2):
+    passing by value (if primitive type) - copy is created of the original variable
+    passing by reference (if object) - stored in heap - multiple parts of the code might be changing the same object
+
+Objects:
+const human = {}
+or
+const human = new Object();
+
+Object contains collection of key value pairs or properties and values
+const human = {
+    name: 'Filip',
+    born: Date.now(),
+    etc.
+}
+Objects can inherit properties from each other using prototype chain - every object has a private property that links to exactly one prototype. This differs from class-based inheritance because we are dealing with real objects that take memory as opposed to abstract classes.
+human._proto_._proto_; - DO NOT USE THIS IN REAL LIFE
+Object.getPrototypeOf(human); - RECOMMENDED WAY TO GET THE PROTOTYPE
+
+JS supports OOP with keyword class. However classes are just "syntactic sugar" for prototypal inheritance and objects.
+class Human {
+    constructor(name) - called when the object is first created {
+        this.dna = 'AACTG';
+        this.name = name;
+    }
+
+    Optionally getters and setters:
+    get gender() {
+        return this.gender;
+    }
+    set gender(val) {
+        this.gender = val;
+    }
+    
+    walk() {...}
+    static isHuman(human) {...}
+}
+
+Built-in data structures:
+    Array - holds a dynamic collection of indexed items
+        const list = ['foo','bar','bar'];
+    Set - holds a collection of unique items
+        const uniq = new Set(list);
+    Map - holds key value pairs like an object, but it can be more easily looped over and other features
+        const dict = new Map ([
+            ['foo', 1],
+            ['bar', 2]
+        ]);
+
+JavaScript is garbage collected - it automatically de-allocate objects from memory when they are no longer referenced in the code. However with the map, all the properties will be referenced. If that's not optimal, there is weakmap and weakset that contains properties that can be garbage collected to reduce memory usage.
+
+Usually the script is execute synchronously line-by-line
+Event loop allows to write asynchronous script that runs in a separate thread pool while the rest of application continues to execute.
+This is useful because modern websites have multiple things going on at the same time, but only have a single thread for computing (main thread)
+SetTimeout() - takes a function as an argument, but don't call the function until some time passes - this is called callback function
+Callback hell - too many callback functions nested
+const promise = new Promise (
+    (resolve, reject) => {
+        //Do something async here
+
+        if (greatSuccess) {
+            resolve('success');
+        } else {
+            reject('failure');
+        }
+    }
+)
+.then & .catch - handle two possible outputs
+Using async function with await promise and using try/catch
+
+default export and import of functions and values to use it across files.
+
+Package managers: npm is the largest
+When installing package from npm it downloads the code into node_modules folder. It also provides JSON file.
+
+Document Object Model (DOM) - UI is represented as a tree of HTML elements or nodes.
+    document - allows us to grab individual HTML element.
+    querySelector(CSS selector) - find the HTML element with the same CSS selector.
+    querySelectorAll(CSS selector) - grab all of them with that CSS selector.
+    getElementById("id"), getElementsByClassName("className"), etc.
+
+addEventListener('click', () => {
+    console.log('clicked');
+
+    document.body.style.backgroundColor = 'red';
+});
+
+node.js - most popular runtime for server side

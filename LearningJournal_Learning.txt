@@ -1,5 +1,8 @@
 Learning Learning Journal
 
+Professional vs. Beginner
+Most commonly developers will need to know the tools and frameworks available to them and when to apply them.  Staying up to date with the latest technology is important to keep up with security and tools that help reduce development time.  I find writing clean and maintainable code is critical in reducing bugs and making future changes easier to implement.  Depending on if you are doing web development or the application backend, you will also need to be aware of the consumers of you work.  For websites they are the end users and internal applications could be the sites themselves.  Both require considerations to make sure the applications are responsive and easy to use and follow best practices to maintain stability.  Outside of the development it also beneficial to be able to help teammates with troubleshooting and sharing technological skills to solve the ever changing demands of the sites and applications.
+
 There are couple different reasons why want to track our learning progress.
     We can go back and revise learned things
     See what type of learning works best for us
@@ -70,3 +73,87 @@ There are couple ways how to make learning usable
     differentiate between knowledge used every day and knowledge used only every so often
     It's important to know if the environment can give me what I need
     Be careful with complex answers
+
+Sharing what you learned
+    Categories:
+        How to do something new? (paper)
+        How to improve something already done? (paper)
+        A comparison (paper)
+        A proof of concept (program)
+        An overview of a topic (paper)
+    We can do this on either paper or software (it will depend on type of learning, type of content, context, etc.). Paper alone can be sufficient for some cases, while software is rarely sufficient alone.
+    Example of a paper outline:
+        Primary purpose: explain what has been learned.
+        Background knowledge for the reader.
+        Background knowledge for the project.
+        Overview of project/software
+        Things learned
+        Conclusion
+    
+    Different ways to follow what is happening:
+        Learning journals
+        Learning Tasks
+        Walkthrough
+        Exams
+
+    There will be possibilities of learning more than what is necessary needed. There are reasons to both spend time on it and not.
+    In deciding to do that, we need to consider what effort is involved, is it worth the effort?
+    Steps in learning something that might not be necessary:
+        Identifying something that has potential
+        Evaluate the potential to decide if it is worth it
+        Learn it
+    What has potential?
+        What you might need in the future?
+        What you might need for something else?
+        Something interesting
+        New to us
+        Fundamental
+    Evaluate
+        How much time it takes?
+        How much time do I have?
+        Will I have time later?
+        How likely it is to be useful?
+        How quickly is it to be useful?
+        How useful?
+        How hard would it be to find it again if I didn't learn it now?
+    Learn it
+        Record location for later use (location, area of knowledge)
+        Record knowledge (keep a journal)
+        Read for more detailed understanding
+            apply it
+            develop a project
+            teach somebody
+    
+    Productive learning
+        Achieving or producing a significant amount or result
+        Profitable - cost/benefit ration (low)
+        Learning the "most" with the least effort
+        It's the opposite of wasteful. Examples of wasteful learning:
+            Forgetting
+            Re-learning again
+            Learning wrong things
+        Goal:
+            Get what you want
+            Ignore what is not wanted
+        Wasteful activities:
+            Learn the "wrong items"
+            Having to re-learn
+            Not learning anything
+            Being distracted
+        How to avoid:
+            Determine what you want to know
+            Track
+            Evaluate in terms of what you want to know
+            Track important locations of where you have learned things
+            Refer back to goals often
+            Ask yourself if this is helping
+            Quiz yourself
+            Reword what you have learned
+                Apply it to new situations
+        If something else occurs:
+            Write down and move on
+            Set a limit on effort and spend some time on it
+                Summarize what was learned
+                Record locations/etc.
+                Go back to task
+                

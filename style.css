@@ -249,6 +249,10 @@ main {
     font-size: 23px;
 }
 
+#searchBox {
+    height: 30px;
+}
+
 .main-cards {
     margin: 1.5rem 1.5rem;
     display: grid;
@@ -376,4 +380,8 @@ footer {
     display: flex;
     justify-content: right;
     align-items: center;
+}
+
+.footer-time {
+    flex: 1;
 }

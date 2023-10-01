@@ -16,6 +16,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Works</title>
     <link rel="stylesheet" href="style.css">
+    <!--Adding JavaScript file-->
+    <script src="myScript.js"></script>
 </head>
 
 <!--Body of a page-->
@@ -83,6 +85,8 @@
 
         <!--Main section of the page-->
         <main>
+            <!--Call JS function for search-->
+            <input type="text" id="searchBox" onkeyup="searchFunction()" placeholder="Search..">
             <!--Add JavaScript to connect to Contact Me Form and show works-->
             <div class="main-cards">
                 <!--Individual card class and content inside of it. Change later-->
@@ -143,7 +147,9 @@
 
         <!--Footer section-->
         <footer>
-            Filip Segota 2023
+            <!--Call JS function to show time-->
+            <div class="footer-time"></div>
+            <div class="footer-name">Filip Segota 2023</div>
         </footer>
     </div>
 </body>

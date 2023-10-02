@@ -14,6 +14,7 @@ function validateForm() {
     }
     else {
         saveCookies();
+        saveData();
     }
 }
 
@@ -25,6 +26,18 @@ function saveCookies() {
     let name = document.forms["contactForm"]["name"].value;
     document.cookie = "Name=" + name + " Expires=" + expiry.toLocaleString() + " Path=/;";
     alert(document.cookie);
+}
+
+function saveData() {
+    let formObject = {};
+    let formData = new FormData(document.getElementById("contactForm"));
+
+    formData.forEach(function (value, key) {
+        formObject[key] = value;
+    });
+    let formJson = JSON.stringify(formObject)
+
+    console.log(formJson);
 }
 
 //Change text based on selected value

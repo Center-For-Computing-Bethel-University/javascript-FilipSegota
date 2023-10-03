@@ -28,6 +28,7 @@ function saveCookies() {
     alert(document.cookie);
 }
 
+//Save form values in JSON form
 function saveData() {
     let formObject = {};
     let formData = new FormData(document.getElementById("contactForm"));

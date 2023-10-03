@@ -13,8 +13,8 @@ function validateForm() {
         return false;
     }
     else {
-        saveCookies();
         saveData();
+        saveCookies();
     }
 }
 
@@ -37,7 +37,7 @@ function saveData() {
     });
     let formJson = JSON.stringify(formObject)
 
-    console.log(formJson);
+    alert(formJson);
 }
 
 //Change text based on selected value

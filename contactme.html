@@ -91,7 +91,7 @@
                     <!--Form sends information to feedback.php-->
                     <!--Call JS function for submit-->
                     <form id="contactForm" name="contactForm" action="feedback.php" onsubmit="return validateForm()"
-                        method="get" class="main-contact-form">
+                        method="post" class="main-contact-form">
                         <fieldset class="form-fieldset">
                             <legend>Info:</legend>
 
@@ -118,19 +118,19 @@
                         <fieldset class="form-fieldset">
                             <legend>Works:</legend>
 
-                            <input type="checkbox" name="work1" id="work1" value="work1">
+                            <input type="checkbox" name="work[]" id="work1" value="work1">
                             <label for="work1">Work 1</label><br>
 
-                            <input type="checkbox" name="work2" id="work2" value="work2">
+                            <input type="checkbox" name="work[]" id="work2" value="work2">
                             <label for="work2">Work 2</label><br>
 
-                            <input type="checkbox" name="work3" id="work3" value="work3">
+                            <input type="checkbox" name="work[]" id="work3" value="work3">
                             <label for="work3">Work 3</label><br>
 
-                            <input type="checkbox" name="work4" id="work4" value="work4">
+                            <input type="checkbox" name="work[]" id="work4" value="work4">
                             <label for="work4">Work 4</label><br>
 
-                            <input type="checkbox" name="work5" id="work5" value="work5">
+                            <input type="checkbox" name="work[]" id="work5" value="work5">
                             <label for="work5">Work 5</label>
                         </fieldset>
 
